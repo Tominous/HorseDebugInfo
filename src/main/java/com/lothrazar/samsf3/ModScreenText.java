@@ -26,7 +26,7 @@ public class ModScreenText
 	public static final String MODID = "samsf3";
 	@Instance(value = MODID)
 	public static ModScreenText instance;
-	//public static Logger logger; 
+	public static Logger logger; 
    
 	public static String lang(String name)
 	{
@@ -35,7 +35,7 @@ public class ModScreenText
 	@EventHandler
 	public void onPreInit(FMLPreInitializationEvent event)
 	{ 
-		//logger = event.getModLog();  
+		logger = event.getModLog();  
 	
     	FMLCommonHandler.instance().bus().register(instance); 
     	MinecraftForge.EVENT_BUS.register(instance); 
